@@ -30,7 +30,6 @@ public class ProjectController {
             var project = projectService.getProjectById(id);
             return ResponseEntity.ok(project);
         } catch (IllegalArgumentException exception) {
-            System.out.println(exception.getMessage());
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, exception.getMessage());
         }
     }
