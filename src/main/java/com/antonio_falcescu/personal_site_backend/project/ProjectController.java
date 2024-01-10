@@ -9,7 +9,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @RestController
-@RequestMapping(path="api/v1/projects")
+@RequestMapping(path = "api/v1/projects")
 public class ProjectController {
 
     private final ProjectService projectService;

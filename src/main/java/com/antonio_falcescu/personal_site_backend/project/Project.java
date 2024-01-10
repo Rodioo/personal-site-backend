@@ -34,12 +34,16 @@ public class Project {
     @Column(name = "updated_at")
     private Date updatedAt;
 
-    public Project(String title, String platform, String shortDescription, String longDescription, Date createdAt, Date updatedAt) {
+    @Column(name = "cover_image_path")
+    private String coverImagePath;
+
+    public Project(String title, String platform, String shortDescription, String longDescription, Date createdAt, Date updatedAt, String coverImagePath) {
         this.title = title;
         this.platform = platform;
         this.shortDescription = shortDescription;
         this.longDescription = longDescription;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
+        this.coverImagePath = coverImagePath;
     }
 }
