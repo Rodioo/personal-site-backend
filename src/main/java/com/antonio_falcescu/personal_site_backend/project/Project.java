@@ -8,7 +8,10 @@ import lombok.ToString;
 
 import java.util.Date;
 
-@NoArgsConstructor @Getter @Setter @ToString
+@NoArgsConstructor
+@Getter
+@Setter
+@ToString
 @Entity
 @Table(name = "projects")
 public class Project {
@@ -37,7 +40,17 @@ public class Project {
     @Column(name = "cover_image_path")
     private String coverImagePath;
 
-    public Project(String title, String platform, String shortDescription, String longDescription, Date createdAt, Date updatedAt, String coverImagePath) {
+    @Column(name = "git_link")
+    private String gitLink;
+    @Column(name = "app_link")
+    private String appLink;
+
+    private String stack;
+
+    public Project(
+            String title, String platform, String shortDescription, String longDescription,
+            Date createdAt, Date updatedAt, String coverImagePath, String gitLink, String appLink, String stack
+    ) {
         this.title = title;
         this.platform = platform;
         this.shortDescription = shortDescription;
@@ -45,5 +58,8 @@ public class Project {
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
         this.coverImagePath = coverImagePath;
+        this.gitLink = gitLink;
+        this.appLink = appLink;
+        this.stack = stack;
     }
 }
