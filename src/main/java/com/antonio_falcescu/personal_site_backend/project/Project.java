@@ -46,20 +46,5 @@ public class Project {
     private String appLink;
 
     private String stack;
-
-    public Project(
-            String title, String platform, String shortDescription, String longDescription,
-            Date createdAt, Date updatedAt, String coverImagePath, String gitLink, String appLink, String stack
-    ) {
-        this.title = title;
-        this.platform = platform;
-        this.shortDescription = shortDescription;
-        this.longDescription = longDescription;
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
-        this.coverImagePath = coverImagePath;
-        this.gitLink = gitLink;
-        this.appLink = appLink;
-        this.stack = stack;
-    }
+    private String images;
 }
